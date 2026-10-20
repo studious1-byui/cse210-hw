@@ -25,9 +25,9 @@ class Program
         // string school = "BYU-Idaho";
         // Console.WriteLine($"I am studying at {school}.");
 
-        int x = 5;
-        int y = 3;
-        int z = 3;
+        // int x = 5;
+        // int y = 3;
+        // int z = 3;
 
         // if (x > y)
         // {
@@ -82,12 +82,54 @@ class Program
         //     Console.WriteLine($"{fname} is not one of those three.");
         // }
 
-        Console.Write("Enter a number: ");
-        string valueInText = Console.ReadLine();
-        int number = int.Parse(valueInText);
-        Console.Write(number);
+        // Console.Write("Enter a number: ");
+        // string valueInText = Console.ReadLine();
+        // int number = int.Parse(valueInText);
+        // Console.Write(number);
         
-        string textVersion = number.ToString();
-        Console.WriteLine(textVersion);
+        // string textVersion = number.ToString();
+        // Console.WriteLine(textVersion);
+
+        // string response = "yes";
+
+        // while (response == "yes")
+        // {
+        //     Console.Write("Do you want to continue? ");
+        //     response = Console.ReadLine();
+        // }
+
+        // string response;
+
+        // do
+        // {
+        //     Console.Write("Do you want to continue? ");
+        //     response = Console.ReadLine();
+        // } while (response == "yes");
+
+        // for (int i = 0; i < 10; i++)
+        // {
+        //     Console.WriteLine(i);
+        // }
+
+        // for (int i = 2; i <= 20; i = i + 2)
+        // {
+        //     Console.WriteLine(i);
+        // }
+
+        // string[] colors = ["red", "green", "blue"];
+
+        // foreach (string color in colors)
+        // {
+        //     Console.WriteLine(color);
+        // }
+
+        Random randomGenerator = new Random();
+        int number = randomGenerator.Next(1, 11);
+        
+        while (number != 10)
+        {
+            Console.WriteLine(number);
+            number = randomGenerator.Next(1, 11);
+        }
     }
 }
