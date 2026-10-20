@@ -3,6 +3,10 @@
     W01 Exercise 4
     Ask the user for a series of numbers,
     and append each one to a list. Stop when they enter 0.
+    Core Requirements
+    1. Compute the sum, or total, of the numbers in the list.
+    2. Compute the average of the numbers in the list.
+    3. Find the maximum, or largest, number in the list.
 */
 using System;
 using System.Text.Json.Serialization;
