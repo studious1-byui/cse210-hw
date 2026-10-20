@@ -1,3 +1,8 @@
+/*
+    Scott Christopher Severn
+    W01 Exercise 1
+    Reads a name from the console and prints a message.
+*/
 using System;
 
 class Program
