@@ -46,7 +46,6 @@ class Program
                 }
 
                 numberOfGuesses += 1;
-
                 
             } while (userGuess != magicNumber);
 
@@ -55,6 +54,5 @@ class Program
             userResponse = Console.ReadLine();
 
         } while(userResponse == "yes");
-
     }
 }
