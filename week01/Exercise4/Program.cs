@@ -30,11 +30,6 @@ class Program
             number = Console.ReadLine();
             numberEntered = double.Parse(number);
 
-            // Find the maximum, or largest, number in the list.
-            if (numberEntered > largestNumberSoFar)
-            {
-                largestNumberSoFar = numberEntered;
-            }
             numbers.Add(numberEntered);
 
             sum += numberEntered;
@@ -50,6 +45,15 @@ class Program
             }
 
         } while (numberEntered != 0);
+
+        // Find the maximum, or largest, number in the list.
+        foreach (double enteredNumber in numbers)
+        {
+            if (enteredNumber > largestNumberSoFar)
+            {
+                largestNumberSoFar = enteredNumber;
+            }
+        }
 
         // Compute average if total numbers entered by user is not zero.
         if (totalNumbersEntered != 0)
