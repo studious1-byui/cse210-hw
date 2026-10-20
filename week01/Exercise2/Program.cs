@@ -1,3 +1,9 @@
+/*
+    Scott Christopher Severn
+    W01 Exercise 2
+    Determines a letter grade based on a grade percentage.
+*/
+
 using System;
 
 class Program
