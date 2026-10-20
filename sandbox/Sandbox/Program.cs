@@ -123,13 +123,13 @@ class Program
         //     Console.WriteLine(color);
         // }
 
-        Random randomGenerator = new Random();
-        int number = randomGenerator.Next(1, 11);
+        // Random randomGenerator = new Random();
+        // int number = randomGenerator.Next(1, 11);
         
-        while (number != 10)
-        {
-            Console.WriteLine(number);
-            number = randomGenerator.Next(1, 11);
-        }
+        // while (number != 10)
+        // {
+        //     Console.WriteLine(number);
+        //     number = randomGenerator.Next(1, 11);
+        // }
     }
 }

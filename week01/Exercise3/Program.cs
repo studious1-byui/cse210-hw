@@ -10,7 +10,6 @@ class Program
     static void Main(string[] args)
     {
         // Console.WriteLine("Hello World! This is the Exercise3 Project.");
-        string number;
         string userNumber;
         int userGuess;
         int numberOfGuesses = 0;
@@ -18,9 +17,11 @@ class Program
         
         do
         {
+            // Generate random number between 1 and 100
             Random random = new Random();
             int magicNumber = random.Next(1, 101);
-            number = "";
+            
+            // Reset variables if user wants to play again.
             userGuess = 0;
             numberOfGuesses = 0;
             userResponse = "";
@@ -54,8 +55,6 @@ class Program
             userResponse = Console.ReadLine();
 
         } while(userResponse == "yes");
-
-        
 
     }
 }
