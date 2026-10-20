@@ -17,7 +17,7 @@ class Program
         {
             sign = "+";
         }
-        // Determine minus grade sign based on if the last digit of earned grade is <=3
+        // Determine minus grade sign based on if the last digit of earned grade is <= 3
         else if (gradePercentage % 10 <= 3)
         {
             sign = "-";
