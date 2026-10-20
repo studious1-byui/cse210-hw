@@ -50,7 +50,7 @@ class Program
             } while (userGuess != magicNumber);
 
             Console.WriteLine($"It took you {numberOfGuesses} guesses.");
-            Console.Write("Do you want to play again? ");
+            Console.Write("Do you want to play again? \"yes\" or \"no\" ");
             userResponse = Console.ReadLine();
 
         } while(userResponse == "yes");
