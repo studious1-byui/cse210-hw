@@ -11,17 +11,11 @@ class Program
     {
         // Console.WriteLine("Hello World! This is the Exercise3 Project.");
         string number;
-        // int magicNumber;
         string userNumber;
         int userGuess;
-
-        // Console.Write("What is the magic number? ");
-        // number = Console.ReadLine();
-        // magicNumber = int.Parse(number);
         
         Random random = new Random();
         int magicNumber = random.Next(1, 101);
-
 
         do
         {
