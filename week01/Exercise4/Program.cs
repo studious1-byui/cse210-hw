@@ -13,12 +13,13 @@ class Program
     {
         // Console.WriteLine("Hello World! This is the Exercise4 Project.");
         
-        List<int> numbers = new List<int>();   // List to add to numbers entered by user.
+        List<double> numbers = new List<double>();   // List to add to numbers entered by user.
         string number = "";                    // string of number entered from console.
-        int numberEntered;                     // int version of string number.
+        double numberEntered;                  // double version of string number.
         int totalNumbersEntered = 0;           // All numbers added by user from console.
         double sum = 0;                        // Running total of numbers input from console.
         double average = 0;                    // Average of all numbers entered.
+        double largestNumberSoFar = 0;             // Holds the largest number added to the list.
 
         Console.WriteLine("Enter a list of numbers, type 0 when finished.");
         
@@ -27,8 +28,13 @@ class Program
             // Prompt user for a non-zero number and add it to the numbers list.
             Console.Write("Enter number: ");
             number = Console.ReadLine();
-            numberEntered = int.Parse(number);
+            numberEntered = double.Parse(number);
 
+            // Find the maximum, or largest, number in the list.
+            if (numberEntered > largestNumberSoFar)
+            {
+                largestNumberSoFar = numberEntered;
+            }
             numbers.Add(numberEntered);
 
             sum += numberEntered;
@@ -52,6 +58,7 @@ class Program
         }
 
         // Output results.
+        Console.WriteLine($"Largest Number: {largestNumberSoFar}");
         Console.WriteLine($"Sum: {sum} Total Numbers Entered: {totalNumbersEntered}");
         Console.WriteLine($"The average is: {average}");
     }
