@@ -7,6 +7,12 @@
     1. Compute the sum, or total, of the numbers in the list.
     2. Compute the average of the numbers in the list.
     3. Find the maximum, or largest, number in the list.
+    TODO: Stretch challenges
+    1. Have the user enter both positive and negative numbers,
+    then find the smallest positive number (the positive number that is closest to zero).
+
+    2. Sort the numbers in the list and display the new, sorted list. 
+    Hint: There are C# libraries that can help you here, try searching the internet for them.
 */
 using System;
 using System.Text.Json.Serialization;
@@ -34,7 +40,10 @@ class Program
             number = Console.ReadLine();
             numberEntered = double.Parse(number);
 
-            numbers.Add(numberEntered);
+            if (numberEntered != 0)
+            {
+                numbers.Add(numberEntered);
+            }
 
             sum += numberEntered;
 
@@ -50,24 +59,51 @@ class Program
 
         } while (numberEntered != 0);
 
+        double smallestNumberSoFar = 1_000_000_000; 
+
         // Find the maximum, or largest, number in the list.
         foreach (double enteredNumber in numbers)
         {
-            if (enteredNumber > largestNumberSoFar)
+            if (enteredNumber != 0)
             {
-                largestNumberSoFar = enteredNumber;
+                if (enteredNumber > largestNumberSoFar)
+                {
+                    largestNumberSoFar = enteredNumber;
+                }
+                
+                // Test to make sure enteredNumber is the smallest positive number.
+                if (enteredNumber < smallestNumberSoFar && enteredNumber > 0)
+                {
+                    smallestNumberSoFar = enteredNumber;
+                }
             }
+            
         }
+
+
 
         // Compute average if total numbers entered by user is not zero.
         if (totalNumbersEntered != 0)
         {
             average = sum / totalNumbersEntered;    
         }
+        
 
         // Output results.
-        Console.WriteLine($"Largest Number: {largestNumberSoFar}");
-        Console.WriteLine($"Sum: {sum} Total Numbers Entered: {totalNumbersEntered}");
+        Console.WriteLine($"The sum is: {sum} Total Numbers Entered: {totalNumbersEntered}");
         Console.WriteLine($"The average is: {average}");
+        Console.WriteLine($"The largest number is: {largestNumberSoFar}");
+        Console.WriteLine($"The smallest positive number is: {smallestNumberSoFar}");
+        
+        // Sort numbers list.
+        numbers.Sort();
+        // Print sorted list.
+        foreach (double individualNumber in numbers)
+        {
+            // if (individualNumber != 0)
+            // {
+            Console.WriteLine(individualNumber);
+            // }
+        }
     }
 }
