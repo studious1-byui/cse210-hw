@@ -3,14 +3,15 @@
     W01 Exercise 4
     Ask the user for a series of numbers,
     and append each one to a list. Stop when they enter 0.
+
     Core Requirements
     1. Compute the sum, or total, of the numbers in the list.
     2. Compute the average of the numbers in the list.
     3. Find the maximum, or largest, number in the list.
+    
     Stretch challenges
     1. Have the user enter both positive and negative numbers,
     then find the smallest positive number (the positive number that is closest to zero).
-
     2. Sort the numbers in the list and display the new, sorted list. 
     Hint: There are C# libraries that can help you here, try searching the internet for them.
 */
@@ -52,10 +53,6 @@ class Program
             {
                 totalNumbersEntered += 1;
             }
-            else
-            {
-                totalNumbersEntered += 0;
-            }
 
         } while (numberEntered != 0);
 
@@ -71,13 +68,13 @@ class Program
                     largestNumberSoFar = enteredNumber;
                 }
                 
+                // Find the smallest positive number.
                 // Test to make sure enteredNumber is the smallest positive number.
                 if (enteredNumber < smallestNumberSoFar && enteredNumber > 0)
                 {
                     smallestNumberSoFar = enteredNumber;
                 }
             }
-            
         }
 
         // Compute average if total numbers entered by user is not zero.
@@ -87,7 +84,7 @@ class Program
         }
         
         // Output results.
-        Console.WriteLine($"The sum is: {sum} Total Numbers Entered: {totalNumbersEntered}");
+        Console.WriteLine($"The sum is: {sum}");
         Console.WriteLine($"The average is: {average}");
         Console.WriteLine($"The largest number is: {largestNumberSoFar}");
         Console.WriteLine($"The smallest positive number is: {smallestNumberSoFar}");
@@ -95,6 +92,7 @@ class Program
         // Sort numbers list.
         numbers.Sort();
         // Print sorted list.
+        Console.WriteLine("The sorted list is:");
         foreach (double individualNumber in numbers)
         {
             Console.WriteLine(individualNumber);
