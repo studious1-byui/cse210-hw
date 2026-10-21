@@ -70,9 +70,17 @@ class Program
 
         // Call each method with necessary parameters.
         DisplayMessage();
+
+        // Get user name.
         string userNameEntered = PromptUserName();
+        
+        // Get user's favorite number.
         int userFavoriteNumber = PromptUserNumber();
+        
+        // Square user's favorite number.
         int userNumberSquared = SquareNumber(userFavoriteNumber);
+        
+        // Output results.
         DisplayResult(userNameEntered, userNumberSquared);
     }
 }
