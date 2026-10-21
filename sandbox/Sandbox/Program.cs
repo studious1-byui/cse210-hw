@@ -133,25 +133,40 @@ class Program
         //     number = randomGenerator.Next(1, 11);
         // }
 
-        List<int> numbers = new List<int>();
+        // List<int> numbers = new List<int>();
         
-        List<string> words;
-        words = new List<string>();
+        // List<string> words;
+        // words = new List<string>();
 
-        words.Add("phone");
-        words.Add("keyboard");
-        words.Add("mouse");
+        // words.Add("phone");
+        // words.Add("keyboard");
+        // words.Add("mouse");
 
-        Console.WriteLine(words.Count);
+        // Console.WriteLine(words.Count);
 
-        // foreach (string word in words)
+        // // foreach (string word in words)
+        // // {
+        // //     Console.WriteLine(word);
+        // // }
+
+        // for (int i = 0; i < words.Count; i++)
         // {
-        //     Console.WriteLine(word);
+        //     Console.WriteLine(words[i]);
         // }
-
-        for (int i = 0; i < words.Count; i++)
+        static void DisplayMessage()
         {
-            Console.WriteLine(words[i]);
+            Console.WriteLine("Hello World!");
+        }
+
+        static void DisplayPersonalMessage(string userName)
+        {
+            Console.WriteLine($"Hello {userName}");
+        }
+
+        static int AddNumbers(int first, int second)
+        {
+            int sum = first + second;
+            return sum;
         }
     }
 }
