@@ -7,7 +7,7 @@
     1. Compute the sum, or total, of the numbers in the list.
     2. Compute the average of the numbers in the list.
     3. Find the maximum, or largest, number in the list.
-    TODO: Stretch challenges
+    Stretch challenges
     1. Have the user enter both positive and negative numbers,
     then find the smallest positive number (the positive number that is closest to zero).
 
@@ -80,15 +80,12 @@ class Program
             
         }
 
-
-
         // Compute average if total numbers entered by user is not zero.
         if (totalNumbersEntered != 0)
         {
             average = sum / totalNumbersEntered;    
         }
         
-
         // Output results.
         Console.WriteLine($"The sum is: {sum} Total Numbers Entered: {totalNumbersEntered}");
         Console.WriteLine($"The average is: {average}");
@@ -100,10 +97,7 @@ class Program
         // Print sorted list.
         foreach (double individualNumber in numbers)
         {
-            // if (individualNumber != 0)
-            // {
             Console.WriteLine(individualNumber);
-            // }
         }
     }
 }
