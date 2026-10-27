@@ -20,7 +20,7 @@ class Program
         // int y = 3;
         // if (x > y)
         // {
-        //     Console.WriteLine("greater");
+        //     Console.WriteLine("greater than");
         // }
 
         // string school = "BYU-Idaho";
@@ -29,6 +29,23 @@ class Program
         // int x = 5;
         // int y = 3;
         // int z = 3;
+
+        // if (x > y)
+        // {
+        //     if (x > z)
+        //     {
+        //         Console.WriteLine("greater than both.");
+        //     }
+        // }
+        
+        // if (x > y)
+        // {
+        //     Console.WriteLine("greater than");
+        // }
+        // else
+        // {
+        //     Console.WriteLine("less than");
+        // }
 
         // if (x > y)
         // {
@@ -46,21 +63,13 @@ class Program
         // string name = "John";
         // if (name == "John")
         // {
-        //     Console.WriteLine("The name is John");
+        //     Console.WriteLine($"The name is {name}");
         // }
 
         // string favoriteColor = "sky blue";
-        // string color = "";
-
-        // Console.Write("Enter a color: ");
-        // color = Console.ReadLine();
         // if (color != favoriteColor)
         // {
-        //     Console.WriteLine($"{color} is not my favorite.");
-        // }
-        // else
-        // {
-        //     Console.WriteLine($"{color} is my favorite.");
+        //     Console.WriteLine("That color is not my favorite");
         // }
 
         // Console.Write("Enter your first name: ");
@@ -75,21 +84,24 @@ class Program
 
         // if (fname == "Brigham" && lname == "Young")
         // {
-        //     Console.WriteLine($"Welcome, Brother {fname}!");
+        //     Console.WriteLine("Welcome Brother Brigham!");   
         // }
 
-        // if (!(fname == "Peter" || fname == "James" || fname == "John"))
+        // else if (!(fname == "Peter" || fname == "James" || fname == "John"))
         // {
-        //     Console.WriteLine($"{fname} is not one of those three.");
+        //     Console.WriteLine("This is not one of those three.");
         // }
-
-        // Console.Write("Enter a number: ");
-        // string valueInText = Console.ReadLine();
-        // int number = int.Parse(valueInText);
-        // Console.Write(number);
         
-        // string textVersion = number.ToString();
-        // Console.WriteLine(textVersion);
+        // string valueInText = "42";
+        // int number = int.Parse(valueInText);
+
+        Console.Write("Enter your favorite number: ");
+        string valueInText = Console.ReadLine();
+        int number = int.Parse(valueInText);
+        Console.WriteLine(number);
+
+        string textVersion = number.ToString();
+        Console.WriteLine(textVersion);
 
         // string response = "yes";
 
@@ -153,20 +165,20 @@ class Program
         // {
         //     Console.WriteLine(words[i]);
         // }
-        static void DisplayMessage()
-        {
-            Console.WriteLine("Hello World!");
-        }
+        // static void DisplayMessage()
+        // {
+        //     Console.WriteLine("Hello World!");
+        // }
 
-        static void DisplayPersonalMessage(string userName)
-        {
-            Console.WriteLine($"Hello {userName}");
-        }
+        // static void DisplayPersonalMessage(string userName)
+        // {
+        //     Console.WriteLine($"Hello {userName}");
+        // }
 
-        static int AddNumbers(int first, int second)
-        {
-            int sum = first + second;
-            return sum;
-        }
+        // static int AddNumbers(int first, int second)
+        // {
+        //     int sum = first + second;
+        //     return sum;
+        // }
     }
 }
